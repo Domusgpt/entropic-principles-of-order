@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bullet Cluster: A Test for the Fabric of Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B1120;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ffa600, #ff764a, #ef5675);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flow-arrow {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin: 1rem 0;
+        }
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background-color: #7a5195;
+        }
+        .flow-arrow::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #7a5195;
+        }
+        .flow-combine-h {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: #7a5195;
+            top: -2.5rem;
+        }
+        .flow-combine-h::before, .flow-combine-h::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 2rem;
+            background-color: #7a5195;
+        }
+        .flow-combine-h::before { left: 25%; }
+        .flow-combine-h::after { right: 25%; }
+    </style>
+</head>
+<body class="text-gray-200 antialiased">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight gradient-text">A UNIVERSE OF INFORMATION</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-300">How the collision of galaxies could rewrite the laws of gravity.</p>
+        </header>
+
+        <main>
+            <section id="crisis" class="my-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                        <h2 class="text-3xl font-bold text-white mb-4">The Cosmological Crisis</h2>
+                        <p class="text-lg text-gray-400">The Standard Model of Cosmology (ΛCDM) has a profound problem. While it successfully describes the universe's evolution, it requires that 95% of the cosmos is made of two mysterious entities—dark matter and dark energy—for which we have no direct evidence or fundamental explanation.</p>
+                        <ul class="mt-6 space-y-2">
+                            <li class="flex items-start"><span class="text-2xl mr-3 text-[#ffa600]">❓</span><span><strong class="text-white">Unfound Particles:</strong> Decades of searching for dark matter particles have yielded nothing, pushing theories into increasingly unlikely territory.</span></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3 text-[#ef5675]">💥</span><span><strong class="text-white">Theoretical Disaster:</strong> Our best theory of vacuum energy is wrong by 120 orders of magnitude, the worst prediction in physics history.</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">The Universe We Can't See</h3>
+                        <div class="chart-container h-64 md:h-80"><canvas id="cosmicPieChart"></canvas></div>
+                        <p class="text-center text-gray-400 mt-4">According to ΛCDM, all visible matter accounts for a mere 5% of the universe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison" class="my-24">
+                 <h2 class="text-4xl font-bold text-center text-white mb-12">Two Competing Realities</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-900/50 rounded-lg shadow-2xl p-8 border-t-4 border-[#374c80]">
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center"><span class="text-4xl mr-4">⚛️</span>The Standard Model (ΛCDM)</h3>
+                        <p class="text-lg text-gray-400 mb-4">A Universe of <strong class="text-[#374c80]">Particles</strong></p>
+                        <p>Gravity is a distortion of spacetime caused by mass and energy. The anomalous gravity we observe in galaxies is caused by vast, invisible halos of a new, undiscovered type of particle—cold dark matter.</p>
+                    </div>
+                     <div class="bg-gray-900/50 rounded-lg shadow-2xl p-8 border-t-4 border-[#bc5090]">
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center"><span class="text-4xl mr-4">ℹ️</span>The Entropic Principle (EPO)</h3>
+                        <p class="text-lg text-gray-400 mb-4">A Universe of <strong class="text-[#bc5090]">Information</strong></p>
+                        <p>Gravity arises from a system's mass AND its informational structure. What we call "dark matter" is not a particle, but the observable gravitational effect of a system's complexity and organization.</p>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="bullet-cluster" class="my-24">
+                <h2 class="text-4xl font-bold text-center text-white mb-4">The Litmus Test: The Bullet Cluster</h2>
+                <p class="text-xl text-center max-w-4xl mx-auto text-gray-400 mb-12">A high-speed collision between two galaxy clusters has separated their components, creating a natural laboratory to test the nature of gravity and mass.</p>
+
+                <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                    <div class="relative w-full aspect-[16/9] bg-black rounded-md overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1280x720/000000/FFFFFF?text=Starfield+Background');"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                             <div class="absolute w-2/5 h-2/5 bg-[#bc5090]/30 rounded-full" style="transform: translate(-20%, 0); filter: blur(30px);"></div>
+                             <div class="absolute w-1/5 h-1/5 bg-[#bc5090]/40 rounded-full" style="transform: translate(60%, 0); filter: blur(20px);"></div>
+                             <div class="absolute w-1/3 h-1/3 text-center" style="transform: translate(-80%, 0);">
+                                 <span class="inline-block w-3 h-3 bg-yellow-300 rounded-full shadow-lg shadow-yellow-300/50"></span>
+                                 <span class="inline-block w-2 h-2 bg-white rounded-full shadow-lg ml-2"></span>
+                                 <span class="inline-block w-4 h-4 bg-yellow-400 rounded-full shadow-lg shadow-yellow-400/50 ml-1"></span>
+                             </div>
+                              <div class="absolute w-1/4 h-1/4 text-center" style="transform: translate(120%, 0);">
+                                 <span class="inline-block w-3 h-3 bg-yellow-300 rounded-full shadow-lg shadow-yellow-300/50"></span>
+                                 <span class="inline-block w-2 h-2 bg-white rounded-full shadow-lg ml-2"></span>
+                             </div>
+                        </div>
+                        <div class="absolute inset-0" id="lensing-overlay">
+                            <div class="absolute w-1/3 h-2/3 border-2 border-[#374c80]/80 rounded-full" style="transform: translate(-85%, 10%) rotate(-15deg);"></div>
+                            <div class="absolute w-1/4 h-1/2 border-2 border-[#374c80]/60 rounded-full" style="transform: translate(-82%, 12%) rotate(-15deg); filter: blur(2px);"></div>
+                            <div class="absolute w-1/4 h-1/2 border-2 border-[#374c80]/80 rounded-full" style="transform: translate(125%, 20%) rotate(20deg);"></div>
+                            <div class="absolute w-1/5 h-2/5 border-2 border-[#374c80]/60 rounded-full" style="transform: translate(128%, 22%) rotate(20deg); filter: blur(2px);"></div>
+                        </div>
+                    </div>
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-center">
+                        <div><p><strong class="text-[#ffa600]">Galaxies (Visible Light):</strong> The stars pass through each other almost without interaction.</p></div>
+                        <div><p><strong class="text-[#bc5090]">Hot Gas (X-Rays):</strong> The vast clouds of gas collide and slow down, forming the central "bullet" shape.</p></div>
+                        <div><p><strong class="text-[#374c80]">Total Mass (Lensing):</strong> The bulk of the system's gravity follows the galaxies, not the gas where most of the normal mass resides.</p></div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                     <p class="text-xl text-gray-300 max-w-3xl mx-auto"><strong class="gradient-text">The Result:</strong> There's a clear separation between where the normal matter is (gas) and where the gravity is (lensing). ΛCDM calls this proof of dark matter. EPO claims it's proof of informational gravity.</p>
+                </div>
+            </section>
+            
+            <section id="ci-flow" class="my-24">
+                <h2 class="text-4xl font-bold text-center text-white mb-4">Building the EPO Prediction</h2>
+                <p class="text-xl text-center max-w-4xl mx-auto text-gray-400 mb-12">The EPO framework proposes a "Complexity Index" (CI) map built exclusively from the properties of visible matter. This CI map is the theory's prediction for the "dark matter" effect.</p>
+                <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-white">Proxy for Order</h4>
+                            <p class="text-sm text-gray-400">(Low Kinetic Randomness)</p>
+                            <div class="my-4 text-4xl">🌡️</div>
+                            <p class="text-gray-300">Inverted Gas Temperature Map from <strong class="text-[#ff764a]">Chandra X-Ray Data</strong>. Cooler regions are more ordered.</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                             <h4 class="font-bold text-lg text-white">Proxy for Coherence</h4>
+                            <p class="text-sm text-gray-400">(Low Velocity Randomness)</p>
+                            <div class="my-4 text-4xl">💨</div>
+                            <p class="text-gray-300">Inverted Velocity Dispersion Map from <strong class="text-[#ef5675]">VLT/Magellan Data</strong>. Coherent streams are more ordered.</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg text-white">Proxy for Pattern</h4>
+                            <p class="text-sm text-gray-400">(Low Algorithmic Randomness)</p>
+                            <div class="my-4 text-4xl">✨</div>
+                            <p class="text-gray-300">Coherent Structure Map (e.g., stellar streams) from <strong class="text-[#bc5090]">HST/JWST Data</strong>. Patterns have low complexity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative mt-8">
+                       <div class="md:hidden">
+                           <div class="flow-arrow"></div>
+                           <div class="flow-arrow"></div>
+                       </div>
+                       <div class="hidden md:block">
+                           <div class="flow-combine-h"></div>
+                           <div class="flow-arrow mt-[-2rem]"></div>
+                       </div>
+                    </div>
+
+                    <div class="mt-4 md:mt-0 max-w-md mx-auto bg-[#003f5c] p-6 rounded-lg text-center shadow-lg">
+                        <h3 class="text-2xl font-bold text-white flex items-center justify-center"><span class="text-4xl mr-4">ℹ️</span>Complexity Index (CI) Map</h3>
+                        <p class="mt-2 text-gray-200">A weighted combination of these observable proxies creates a single map that predicts the location and strength of the system's "informational gravity".</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="correlation" class="my-24">
+                <h2 class="text-4xl font-bold text-center text-white mb-4">The Final Showdown: Prediction vs. Observation</h2>
+                <p class="text-xl text-center max-w-4xl mx-auto text-gray-400 mb-12">The decisive test is a simple correlation. Does the observed gravitational lensing map correlate better with the baryonic mass (as MOND might suggest) or with the Complexity Index (as EPO predicts)?</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">ΛCDM / MOND Expectation</h3>
+                        <div class="chart-container"><canvas id="scatterWeak"></canvas></div>
+                        <p class="text-center text-gray-400 mt-4">A <strong class="text-red-400">weak or non-existent correlation</strong> is expected between the observed gravity (lensing) and the baryonic mass distribution alone, because in ΛCDM the gravity is dominated by unseen particles.</p>
+                    </div>
+                    <div class="bg-gray-900/50 rounded-lg shadow-2xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">EPO Prediction</h3>
+                        <div class="chart-container"><canvas id="scatterStrong"></canvas></div>
+                        <p class="text-center text-gray-400 mt-4">A <strong class="text-green-400">strong, direct correlation</strong> is predicted between the observed gravity (lensing) and the Complexity Index. If true, this would suggest "dark matter" is an illusion caused by information.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center my-16 border-t border-gray-800 pt-8">
+            <h2 class="text-3xl font-bold gradient-text">A Paradigm Shift in Waiting</h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">The result of this test on the Bullet Cluster could either reinforce the search for new particles or trigger a revolution, forcing us to reconsider the fundamental nature of reality itself—from a universe of things to a universe of process and information.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (str, maxWidth) => {
+                if (str.length <= maxWidth) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    if ((currentLine + " " + words[i]).length > maxWidth) {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    } else {
+                        currentLine += " " + words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(' ');
+                } else {
+                  return label;
+                }
+            };
+
+            const cosmicPalette = {
+                darkEnergy: '#7a5195',
+                darkMatter: '#374c80',
+                baryonicMatter: '#ffa600'
+            };
+
+            const cosmicPieCtx = document.getElementById('cosmicPieChart').getContext('2d');
+            new Chart(cosmicPieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Dark Energy', 'Dark Matter', 'Baryonic (Normal) Matter'],
+                    datasets: [{
+                        data: [68, 27, 5],
+                        backgroundColor: [
+                            cosmicPalette.darkEnergy,
+                            cosmicPalette.darkMatter,
+                            cosmicPalette.baryonicMatter,
+                        ],
+                        borderColor: '#0B1120',
+                        borderWidth: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#d1d5db',
+                                font: { size: 14 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+
+            const generateScatterData = (count, strongCorrelation) => {
+                const data = [];
+                for (let i = 0; i < count; i++) {
+                    const x = Math.random() * 10;
+                    let y;
+                    if (strongCorrelation) {
+                        y = x * 1.5 + (Math.random() - 0.5) * 1.5;
+                    } else {
+                        y = x * 0.5 + Math.random() * 8;
+                    }
+                    data.push({ x: x, y: Math.max(0, y) });
+                }
+                return data;
+            };
+            
+            const scatterOptions = (title) => ({
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                     tooltip: {
+                        callbacks: { title: tooltipTitleCallback }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: title,
+                            color: '#9ca3af',
+                            font: { size: 14 }
+                        },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#9ca3af' }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Observed Lensing Strength',
+                            color: '#9ca3af',
+                            font: { size: 14 }
+                        },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#9ca3af' }
+                    }
+                }
+            });
+
+            const scatterWeakCtx = document.getElementById('scatterWeak').getContext('2d');
+            new Chart(scatterWeakCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Lensing vs Baryonic Mass',
+                        data: generateScatterData(50, false),
+                        backgroundColor: '#ef5675'
+                    }]
+                },
+                options: scatterOptions('Baryonic Mass Density')
+            });
+
+            const scatterStrongCtx = document.getElementById('scatterStrong').getContext('2d');
+            new Chart(scatterStrongCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Lensing vs Complexity Index',
+                        data: generateScatterData(50, true),
+                        backgroundColor: '#ff764a'
+                    }]
+                },
+                options: scatterOptions('Complexity Index (CI) Value')
+            });
+        });
+    </script>
+</body>
+</html>
